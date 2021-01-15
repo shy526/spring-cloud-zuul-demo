@@ -15,10 +15,14 @@ logging:
     root: error
 zuul:
   routes:
-    #eureka-client-01:
-    #  path: /api/**
-   #   serviceId: eureka-client-01
-    testService:
-      path: /api2/**
-      url: http://localhost:8763/
-      serviceId: testService
+    uuu:
+      path: /api/**
+      serviceId: eureka-client-01
+    #testService:
+     # path: /api2/**
+     # url: http://localhost:8763/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: routes,filters
