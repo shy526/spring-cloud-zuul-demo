@@ -6,6 +6,7 @@
         <module>eureka-service</module>
         <module>zuul-service</module>
         <module>eureka-client</module>
+        <module>nacos-config</module>
     </modules>
     <groupId>com.demo</groupId>
     <artifactId>spring-cloud-demo</artifactId>
