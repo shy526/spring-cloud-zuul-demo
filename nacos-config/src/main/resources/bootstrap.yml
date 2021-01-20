@@ -6,6 +6,7 @@ spring:
         file-extension: yaml
         timeout: 5000
         config-long-poll-timeout:
+        #group:
   application:
     name: nacos-config
 server:
