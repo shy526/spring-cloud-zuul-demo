@@ -1,15 +1,19 @@
 spring:
   application:
     name: zuul-01
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
 server:
   port: 8762
-eureka:
-  client:
-    server-url:
+#eureka:
+#  client:
+#    server-url:
       # 注册地址
-      defaultZone: http://localhost:8761/eureka/
+#      defaultZone: http://localhost:8761/eureka/
     #是否显示注册信息
-    register-with-eureka: true
+#    register-with-eureka: true
 logging:
   level:
     root: error
@@ -17,7 +21,7 @@ zuul:
   routes:
     uuu:
       path: /api/**
-      serviceId: eureka-client-01
+      serviceId: nacos-client
     #testService:
      # path: /api2/**
      # url: http://localhost:8763/

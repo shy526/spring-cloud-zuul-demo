@@ -3,7 +3,6 @@ package com.demo.zuulservice.fallback;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.cloud.netflix.zuul.filters.route.FallbackProvider;
-import org.springframework.http.client.ClientHttpRequest;
 import org.springframework.http.client.ClientHttpResponse;
 import org.springframework.stereotype.Component;
 
@@ -23,7 +22,7 @@ public class TestFallback implements FallbackProvider {
      */
     @Override
     public String getRoute() {
-        return "t1";
+        return "nacos-client";
     }
 
     @Override
