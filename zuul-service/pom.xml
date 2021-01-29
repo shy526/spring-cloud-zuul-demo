@@ -14,6 +14,7 @@
 
 	<properties>
 		<java.version>1.8</java.version>
+		<nacos.config.version>2.2.3.RELEASE</nacos.config.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -27,6 +28,11 @@
 		<dependency>
 			<groupId>com.alibaba.cloud</groupId>
 			<artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba.cloud</groupId>
+			<artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+			<version>${nacos.config.version}</version>
 		</dependency>
 		<!--不是eureka的项目可以不添加-->
 <!--		<dependency>
