@@ -2,6 +2,7 @@ package com.demo.zuulservice.filter;
 
 import com.netflix.zuul.exception.ZuulException;
 import org.springframework.cloud.netflix.zuul.filters.RouteLocator;
+import org.springframework.cloud.netflix.zuul.filters.support.FilterConstants;
 import org.springframework.stereotype.Component;
 import org.springframework.web.util.UrlPathHelper;
 
@@ -10,7 +11,7 @@ import org.springframework.web.util.UrlPathHelper;
  *
  * @author Administrator
  */
-@Component
+//@Component
 public class TestPreFilter extends MyAbstractFilter {
 
     TestPreFilter(RouteLocator routeLocator, UrlPathHelper urlPathHelper) {
@@ -19,7 +20,7 @@ public class TestPreFilter extends MyAbstractFilter {
 
     @Override
     public String filterType() {
-        return FilterTypeEnum.PRE.getTypeString();
+        return  FilterConstants.PRE_TYPE;
     }
 
     @Override
